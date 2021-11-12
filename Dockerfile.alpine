@@ -2,7 +2,7 @@ FROM frolvlad/alpine-glibc:glibc-2.29
 
 # reference: https://github.com/Technosoft2000/docker-calibre-web
 
-ENV BOOKSTACK_VERSION=${STATE_RELEASE_VERSION} \
+ENV BOOKSTACK_VERSION="${BOOK_VERSION}" \
     TZ=Asia/Shanghai \
     LD_LIBRARY_PATH="/usr/lib:/opt/calibre/lib" \
     PATH="$PATH:/opt/calibre" \
