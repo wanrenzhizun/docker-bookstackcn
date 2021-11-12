@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - '.github/workflows/blank.yml'
+      - 'Dockerfile.alpine'
+      - 'Dockerfile.node'
 env:
   STATE_RELEASE_VERSION: '2.10'
 
