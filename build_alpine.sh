@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t willdockerhub/bookstack:v2.9_alpine -f Dockerfile.alpine .
+docker build -t willdockerhub/bookstack:v2.10_alpine -f Dockerfile.alpine .
