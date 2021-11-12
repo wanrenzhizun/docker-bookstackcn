@@ -6,7 +6,7 @@ ENV BOOKSTACK_VERSION="${STATE_RELEASE_VERSION}" \
 
 WORKDIR /bookstack
 
-RUN echo ${BOOKSTACK_VERSION}
+RUN echo "${BOOKSTACK_VERSION}"
 
 RUN apt-get update -y \
     && echo ${BOOKSTACK_VERSION} \
