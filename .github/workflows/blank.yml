@@ -5,7 +5,7 @@ on:
     paths:
       - '.github/workflows/blank.yml'
 env:
-  STATE_RELEASE_VERSION: 2.10
+  STATE_RELEASE_VERSION: '2.10'
 
 jobs:
   update:
@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: echo
-      run: echo ${{ secrets.DOCKER_USERNAME }}
+      run: echo ${{ docker.DOCKER_USERNAME }}
     - name: Publish to Registry node
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
