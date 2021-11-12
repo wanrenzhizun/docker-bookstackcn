@@ -2,8 +2,10 @@ name: buildDocker
 
 on:
   push:
-    tags:
-      - '*'
+    paths:
+      - '.github/workflows/blank.yml'
+env:
+  STATE_RELEASE_VERSION: 2.10
 
 jobs:
   update:
@@ -11,7 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Publish to Registry node
-      pre: echo ::save-state name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
         name: wanrenzhizun/bookstack
