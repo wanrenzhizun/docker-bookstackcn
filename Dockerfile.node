@@ -7,10 +7,7 @@ ENV BOOKSTACK_VERSION="${BOOK_VERSION}" \
 
 WORKDIR /bookstack
 
-RUN echo "${BOOKSTACK_VERSION}"
-
 RUN apt-get update -y \
-    && echo ${BOOKSTACK_VERSION} \
     && apt-get install -y tzdata git \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && apt-get install -y ttf-wqy-zenhei fonts-wqy-microhei \
@@ -19,9 +16,9 @@ RUN apt-get update -y \
     && chmod +x /usr/local/bin/envsubst \
     && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin \
     && wget https://github.com/TruthHun/BookStack/releases/download/v${BOOKSTACK_VERSION}/BookStack-v${BOOKSTACK_VERSION}_Linux_amd64.zip \
-    && unzip BookStack.V${BOOKSTACK_VERSION}_Linux_amd64.zip \
+    && unzip BookStack-v${BOOKSTACK_VERSION}_Linux_amd64.zip \
     && chmod +x BookStack \
-    && rm -rf BookStack.V${BOOKSTACK_VERSION}_Linux_amd64.zip \
+    && rm -rf BookStack-v${BOOKSTACK_VERSION}_Linux_amd64.zip \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 COPY conf/ /tmp/conf
