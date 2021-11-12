@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: echo
-      run: echo "$DOCKER_USERNAME"
+      run: echo ${{ secrets.DOCKER_USERNAME }}
     - name: Publish to Registry node
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
