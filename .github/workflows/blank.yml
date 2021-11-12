@@ -22,6 +22,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         tags: "latest,${{ env.STATE_RELEASE_VERSION }}_node"
         dockerfile: Dockerfile.node
+        buildargs: STATE_RELEASE_VERSION
     - name: Publish to Registry alpine
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
@@ -30,3 +31,4 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         tags: "latest_alpine,${{ env.STATE_RELEASE_VERSION }}_alpine"
         dockerfile: Dockerfile.alpine
+        buildargs: STATE_RELEASE_VERSION
