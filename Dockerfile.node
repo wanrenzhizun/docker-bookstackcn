@@ -1,5 +1,6 @@
 FROM buildkite/puppeteer:7.1.0
 
+ARG BOOK_VERSION
 ENV BOOKSTACK_VERSION="${BOOK_VERSION}" \
     LANG=C.UTF-8 \
     QTWEBENGINE_CHROMIUM_FLAGS="--no-sandbox"
