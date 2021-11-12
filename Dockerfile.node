@@ -7,6 +7,7 @@ ENV BOOKSTACK_VERSION=${STATE_RELEASE_VERSION} \
 WORKDIR /bookstack
 
 RUN apt-get update -y \
+    && echo ${BOOKSTACK_VERSION} \
     && apt-get install -y tzdata git \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && apt-get install -y ttf-wqy-zenhei fonts-wqy-microhei \
