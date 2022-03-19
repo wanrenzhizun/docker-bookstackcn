@@ -7,7 +7,7 @@ on:
       - 'Dockerfile.alpine'
       - 'Dockerfile.node'
 env:
-  STATE_RELEASE_VERSION: '2.10'
+  STATE_RELEASE_VERSION: '2.11'
 
 
 jobs:
