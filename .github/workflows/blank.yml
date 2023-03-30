@@ -18,7 +18,7 @@ jobs:
     - name: echo
       run: echo ${{ secrets.DOCKER_USERNAME }}
     - name: Publish to Registry node
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       env:
         BOOK_VERSION: ${{ env.STATE_RELEASE_VERSION }}
       with:
@@ -29,7 +29,7 @@ jobs:
         dockerfile: Dockerfile.node
         buildargs: BOOK_VERSION
     - name: Publish to Registry alpine
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       env:
         BOOK_VERSION: ${{ env.STATE_RELEASE_VERSION }}
       with:
