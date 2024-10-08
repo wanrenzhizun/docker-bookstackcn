@@ -2,7 +2,7 @@ version: "3"
   
 services:
   bookstack:
-    image: "wanrenzhizun/bookstack:v2.10_node"
+    image: "wanrenzhizun/bookstack:v2.12_node"
     container_name: bookstack
     ports:
       - "8181:8181"
