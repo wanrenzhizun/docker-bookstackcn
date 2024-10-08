@@ -10,7 +10,7 @@ env:
   STATE_RELEASE_VERSION: '2.12'
 
 
-jobs:
+jobs: 
   update:
     runs-on: ubuntu-18.04
     steps:
